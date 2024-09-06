@@ -1,0 +1,156 @@
+source from chatgpt :
+
+
+1. Google Maps API:
+*  Layanan: Pemetaan, geolokasi, petunjuk arah.
+*  Deskripsi: Menyediakan peta interaktif, pencarian lokasi, dan layanan geocoding untuk mengubah alamat menjadi koordinat geografi.
+-----------------------------------------------------------------------
+2. OpenWeatherMap API:
+*  Layanan: Data cuaca.
+*  Deskripsi: Menyediakan data cuaca saat ini, prakiraan cuaca, dan riwayat cuaca dari berbagai lokasi di seluruh dunia.
+-----------------------------------------------------------------------
+3. NewsAPI : 
+*  Layanan: Berita.
+*  Deskripsi: Menyediakan berita terbaru dari berbagai sumber berita global, dengan fitur filter berdasarkan kata kunci, sumber, dan tanggal.
+-----------------------------------------------------------------------
+4. Twilio API:
+*  Layanan: SMS, panggilan suara, dan pesan WhatsApp.
+*  Deskripsi: API komunikasi yang memungkinkan pengiriman SMS, membuat panggilan suara, dan mengirim pesan WhatsApp melalui aplikasi Anda.
+-----------------------------------------------------------------------
+5. Unsplash API:
+*  Layanan: Gambar bebas royalti.
+*  Deskripsi: Menyediakan akses ke koleksi besar foto berkualitas tinggi yang dapat digunakan untuk tujuan desain, presentasi, dan lainnya.
+-----------------------------------------------------------------------
+6. GitHub API:
+*  Layanan: Manajemen repositori kode.
+*  Deskripsi: Menyediakan akses untuk mengelola repositori GitHub, termasuk komit, pull request, dan masalah (issues).
+-----------------------------------------------------------------------
+7. Spotify API:
+*  Layanan: Data musik.
+*  Deskripsi: Menyediakan data terkait lagu, album, artis, dan playlist di platform Spotify, serta memungkinkan kontrol pemutaran musik melalui aplikasi.
+-----------------------------------------------------------------------
+8. REST Countries API:
+*  Layanan: Data negara.
+*  Deskripsi: Menyediakan informasi terkait negara-negara di dunia, termasuk data demografi, geografis, dan ekonomi.
+-----------------------------------------------------------------------
+9. The Cat API:
+*  Layanan: Gambar kucing.
+*  Deskripsi: Menyediakan gambar kucing secara acak, dan dapat digunakan dalam proyek-proyek yang membutuhkan gambar hewan.
+-----------------------------------------------------------------------
+10. IP Geolocation API:
+*  Layanan: Geolokasi berdasarkan alamat IP.
+*  Deskripsi: Menyediakan informasi geolokasi dari alamat IP, termasuk negara, kota, dan zona waktu.
+----------------------------------------------------------------------
+11. JSONPlaceholder API:
+*  Layanan: Fake Online REST API.
+*  Deskripsi: API palsu yang digunakan untuk tes dan pengembangan front-end atau back-end dengan data palsu seperti posting, komentar, dan pengguna.
+-----------------------------------------------------------------------
+12. ExchangeRate-API:
+*  Layanan: Kurs mata uang.
+*  Deskripsi: Menyediakan informasi tentang kurs mata uang dari berbagai negara di seluruh dunia.
+-----------------------------------------------------------------------
+13. OpenAI GPT API (Free Tier):
+*  Layanan: Pemrosesan bahasa alami (Natural Language Processing).
+*  Deskripsi: Menyediakan akses ke model AI untuk membuat teks, menjawab pertanyaan, dan lain-lain dalam batasan penggunaan gratis.
+-----------------------------------------------------------------------
+14. JokeAPI:
+*  Layanan: API lelucon.
+*  Deskripsi: Menyediakan lelucon yang dapat digunakan di aplikasi atau situs web untuk memberikan hiburan kepada pengguna.
+-----------------------------------------------------------------------
+15. CoinGecko API:
+*  Layanan: Data mata uang kripto.
+*  Deskripsi: Menyediakan data harga mata uang kripto, volume perdagangan, dan informasi pasar lainnya.
+16. Pexels API:
+*  Layanan: Gambar dan video bebas royalti.
+*  Deskripsi: Menyediakan akses ke gambar dan video berkualitas tinggi yang dapat digunakan untuk berbagai keperluan desain dan multimedia.
+-----------------------------------------------------------------------
+17. Firebase (Free Tier):
+*  Layanan: Backend-as-a-Service (BaaS).
+*  Deskripsi: Menyediakan layanan untuk autentikasi, penyimpanan database real-time, penyimpanan file, hosting, dan lainnya.
+-----------------------------------------------------------------------
+18. Alpha Vantage API:
+*  Layanan: Data pasar saham dan keuangan.
+*  Deskripsi: Menyediakan data terkait harga saham, nilai tukar mata uang, dan indikator teknikal untuk pasar keuangan.
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
