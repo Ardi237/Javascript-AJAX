@@ -1,0 +1,264 @@
+A. Umum :
+1. HTTP verbs atau HTTP methods : komponen penting dari protokol HTTP yang digunakan untuk menentukan jenis tindakan yang ingin dilakukan terhadap sumber daya tertentu di server.
+----------------------------------------------------------------------------------
+2. HTTP verbs biasanya digunakan dalam permintaan (request) dari klien ke server untuk menunjukkan jenis operasi yang ingin dilakukan. 
+----------------------------------------------------------------------------------
+3. Ada beberapa metode HTTP yang umum digunakan, yaitu GET, POST, PUT, DELETE, PATCH, HEAD, dan OPTIONS.
+----------------------------------------------------------------------------------
+
+
+
+
+B. HTTP Methods yang Paling Umum :
+1. GET :
+*  Fungsi :  Digunakan untuk mengambil atau meminta data dari server. Misalnya, ketika Anda mengakses halaman web, browser mengirimkan permintaan GET untuk mendapatkan konten halaman tersebut.
+* Contoh Penggunaan : Mendapatkan data dari API, seperti daftar produk, artikel, atau profil pengguna.
+* Karakteristik : Tidak memiliki efek samping, yang berarti operasi ini tidak mengubah data di server. Permintaan GET juga bisa di-cache oleh browser.
+* Contoh :
+<----
+GET /products HTTP/1.1
+Host: www.example.com
+---->
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+2. POST :
+*  Fungsi : Digunakan untuk mengirim data ke server, biasanya untuk membuat atau memodifikasi sumber daya. Misalnya, mengirimkan formulir atau menambahkan item baru ke database.
+*  Contoh Penggunaan : Menambahkan pengguna baru, mengirim data formulir kontak, atau mengunggah file.
+*  Karakteristik : Berbeda dengan GET, POST tidak di-cache dan sering digunakan untuk operasi yang mengubah data di server.
+* Contoh :
+<----
+POST /users HTTP/1.1
+Host: www.example.com
+Content-Type: application/json
+
+{
+   "name": "John Doe",
+   "email": "john@example.com"
+}
+---->
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+3. PUT :
+*  Fungsi : Digunakan untuk memperbarui sumber daya yang sudah ada atau membuat sumber daya baru jika tidak ada. PUT menggantikan semua representasi sumber daya yang ada di server dengan data yang dikirimkan oleh klien.
+---------------------------------------------------------------------------------------
+*  Contoh Penggunaan  Memperbarui informasi pengguna atau mengganti seluruh entri dalam database.
+---------------------------------------------------------------------------------------
+*  Karakteristik : Idempotent, yang berarti melakukan permintaan PUT yang sama berulang kali akan menghasilkan efek yang sama.
+*  Contoh :
+<----
+PUT /users/123 HTTP/1.1
+Host: www.example.com
+Content-Type: application/json
+{
+   "name": "Jane Doe",
+   "email": "jane@example.com"
+}
+---->
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+4. DELETE :
+*  Fungsi : Digunakan untuk menghapus sumber daya dari server. Misalnya, menghapus catatan pengguna atau menghapus item dari keranjang belanja.
+*  Contoh Penggunaan : Menghapus postingan blog, produk, atau pengguna dari sistem.
+*  Karakteristik : Idempotent, seperti PUT, yang berarti mengirimkan permintaan DELETE yang sama berulang kali akan menghasilkan efek yang sama.
+*  Contoh :
+<----
+DELETE /users/123 HTTP/1.1
+Host: www.example.com
+---->
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+5. PATCH :
+*  Fungsi : Digunakan untuk memperbarui sebagian sumber daya di server. Berbeda dengan PUT yang menggantikan seluruh sumber daya, PATCH hanya mengubah bagian tertentu dari sumber daya.
+*  Contoh Penggunaan : Memperbarui alamat email pengguna atau menambahkan komentar pada postingan blog.
+*  Karakteristik : Tidak idempotent, artinya hasilnya bisa berbeda jika dipanggil beberapa kali dengan input yang berbeda.
+*  Contoh :
+<----
+PATCH /users/123 HTTP/1.1
+Host: www.example.com
+Content-Type: application/json
+
+{
+   "email": "newemail@example.com"
+}
+---->
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+6. HEAD :
+*  Fungsi : Sama seperti GET, tetapi hanya mengambil header dari sumber daya, tanpa mengambil body. Digunakan untuk memeriksa informasi meta atau status dari sumber daya tanpa memuat keseluruhan konten.
+*  Contoh Penggunaan : Mengecek apakah suatu halaman ada sebelum mengaksesnya, atau memeriksa metadata tanpa mengambil data secara penuh.
+Karakteristik: Idempotent dan tidak mengubah sumber daya.
+*  Contoh :
+<----
+HEAD /products HTTP/1.1
+Host: www.example.com
+---->
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+7. OPTIONS : 
+*  Fungsi : Digunakan untuk mengambil informasi tentang metode HTTP apa saja yang didukung oleh server pada URL tertentu. Ini berguna untuk mengkonfigurasi permintaan atau mengidentifikasi kemampuan server sebelum mengirim permintaan sebenarnya.
+*  Contoh Penggunaan: Mengetahui metode apa yang didukung untuk mengakses endpoint API.
+*  Karakteristik: Biasanya digunakan dalam preflight requests di CORS (Cross-Origin Resource Sharing).
+*  Contoh : 
+<----
+OPTIONS /users HTTP/1.1
+Host: www.example.com
+---->
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+C. Penjelasan Tambahan :
+1. Idempotency: Metode seperti GET, PUT, DELETE, dan HEAD adalah idempotent, yang berarti hasil dari menjalankan permintaan yang sama beberapa kali tidak akan berubah. Misalnya, menghapus item yang sama dua kali tidak akan menyebabkan kesalahan atau hasil yang berbeda.
+---------------------------------------------------------------------------------------
+2. Safety: Metode seperti GET dan HEAD dianggap aman karena mereka tidak mengubah sumber daya di server.
+---------------------------------------------------------------------------------------
+3. Non-idempotent Methods: Metode seperti POST dan PATCH bisa memberikan hasil yang berbeda jika dipanggil beberapa kali, karena metode ini biasanya digunakan untuk menambahkan atau memperbarui data.
+---------------------------------------------------------------------------------------
+
+
+
+
+
+D. Kesimpulan
+1. HTTP methods (verbs) adalah alat penting yang digunakan dalam komunikasi antara klien dan server untuk mengelola sumber daya. 
+2. Memahami cara kerja dan penggunaan metode-metode ini adalah kunci untuk membangun aplikasi web yang efisien dan aman.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bro cek cookies buat dipelajari
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
