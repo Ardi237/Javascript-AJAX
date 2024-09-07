@@ -1,0 +1,149 @@
+A. Umum : 
+1. Perbedaan antara objek JavaScript dan object JSON terletak pada format, penggunaan, dan aturan penulisan. 
+-----------------------------------------------------------------
+2. Meskipun objek Javascript dan JSON (JavaScript Object Notation) terlihat mirip, keduanya memiliki perbedaan mendasar yang perlu dipahami. 
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+
+
+B. Format & Struktur :
+1. Objek JavaScript : Merupakan struktur data yang digunakan dalam bahasa pemrograman JavaScript
+*  Objek JavaScript adalah kumpulan pasangan kunci (key) dan nilai (value). 
+*  Kunci bisa berupa string atau simbol, dan nilainya bisa berupa berbagai tipe data, termasuk fungsi.
+* Contoh objek JavaScript :
+<----
+const person = {
+  name: "John",
+  age: 30,
+  greet: function() {
+    console.log("Hello!");
+  }
+};
+---->
+-----------------------------------------------------------------
+2. Objek JSON : Merupakan format data yang digunakan untuk menyimpan dan mentransfer data.
+*  Objek JSON adalah representasi string dari data yang menggunakan aturan sintaks tertentu.
+*  Kunci harus berupa string yang diapit tanda kutip ganda, dan nilai hanya bisa berupa tipe data tertentu (string, number, array, object, boolean, atau null).
+*  JSON tidak mendukung fungsi atau metode sebagai nilai.
+*  Contoh objek JSON :
+<---- 
+{
+  "name": "John",
+  "age": 30
+}
+---->
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+
+
+C. Penggunaan :
+1. Objek JavaScript: Digunakan dalam konteks eksekusi kode di dalam program JavaScript.
+*  Kita dapat memanipulasi objek JavaScript dengan menambahkan, menghapus, atau memodifikasi properti secara dinamis, serta memanggil metode yang disematkan.
+-----------------------------------------------------------------
+2. Objek JSON :  Digunakan sebagai format pertukaran data, terutama dalam komunikasi antara server dan klien (misalnya melalui API). 
+*  JSON sering digunakan untuk menyimpan data dalam format teks yang dapat dengan mudah dikirim dan diterima, tetapi tidak dapat berisi metode atau fungsi. 
+*  JSON harus diubah (di-parse) menjadi objek JavaScript sebelum bisa digunakan dalam kode.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+
+
+
+D. Aturan Penulisan :
+1. Objek JavaScript :
+*  Kunci tidak selalu harus berupa string dan tidak harus diapit tanda kutip.
+*  Nilai bisa berupa fungsi, undefined, atau simbol.
+*  Sintaks lebih fleksibel.
+*  Contoh Objek JavaScript :
+<----
+const person = {
+  name: "John", // Kunci tanpa tanda kutip diperbolehkan
+  age: 30,
+  isActive: true,
+  greet: function() { // Fungsi sebagai nilai diperbolehkan
+    console.log("Hello!");
+  },
+  undefinedValue: undefined // Nilai undefined diperbolehkan
+};
+---->
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+2. Objek JSON : 
+*  Kunci harus selalu berupa string diapit tanda kutip ganda.
+*  Nilai hanya bisa berupa string, number, array, object, boolean, atau null.
+*  JSON tidak mengizinkan fungsi, undefined, atau simbol sebagai nilai.
+-----------------------------------------------------------------
+
+
+
+
+E. Konversi antara JSON dan Objek Java Script :
+1. Dari JSON ke Objek JavaScript: Anda dapat mengonversi string JSON menjadi objek JavaScript menggunakan JSON.parse().
+*  Contoh :
+<----
+const jsonString = '{"name": "John", "age": 30}';
+const obj = JSON.parse(jsonString);
+console.log(obj.name); // Output: John
+---->
+-----------------------------------------------------------------
+2. Dari Objek JavaScript ke JSON: Anda dapat mengonversi objek JavaScript menjadi string JSON menggunakan JSON.stringify().
+*  Contoh :
+<----
+const obj = { name: "John", age: 30 };
+const jsonString = JSON.stringify(obj);
+console.log(jsonString); // Output: {"name":"John","age":30}
+---->
+-----------------------------------------------------------------
+
+
+
+
+F. Lingkup Penggunaan : 
+1. Objek JavaScript: Umumnya digunakan dalam logika aplikasi untuk manipulasi data dan interaksi langsung dengan elemen DOM atau variabel lain dalam kode.
+-----------------------------------------------------------------
+2. Objek JSON: Digunakan untuk menyimpan dan mentransfer data antara sistem atau komponen yang berbeda, misalnya antara front-end dan back-end dalam aplikasi web.
+-----------------------------------------------------------------
+
+
+
+
+G. Kesimpulan :
+1. Meskipun objek JavaScript dan JSON sering terlihat mirip dan dapat saling dikonversi, mereka memiliki aturan dan kegunaan yang berbeda.
+-----------------------------------------------------------------
+2. Objek JavaScript adalah struktur data yang kaya dengan kemampuan untuk menyimpan fungsi dan berbagai tipe data lainnya.
+-----------------------------------------------------------------
+3. JSON adalah format data sederhana yang dirancang untuk pertukaran data yang ringan dan mudah dibaca oleh manusia.
+-----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
