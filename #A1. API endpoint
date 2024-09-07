@@ -1,0 +1,67 @@
+A. Umum :
+1. API endpoint adalah URL atau URI (Uniform Resource Indentifier) yang digunakan untuk mengakses atau mengirim data ke server melalui API (Application Programming Interface). 
+------------------------------------------------------------------------------
+2. Endpoint ini adalah titik akhir di server tempat API menerima permintaan (request) dan mengirimkan respons (response).
+------------------------------------------------------------------------------
+3. Setiap endpoint biasanya dikaitkan dengan operasi spesifik yang dapat dilakukan pada data, seperti mengambil informasi, memperbarui data, menghapus data, atau menambahkan data baru. 
+------------------------------------------------------------------------------
+4. Endpoint juga sering kali terkait dengan metode HTTP, seperti GET, POST, PUT, DELETE, dan lainnya, yang menentukan jenis operasi yang akan dilakukan.
+------------------------------------------------------------------------------
+
+
+
+
+
+B. Contoh API Endpoint :
+1. Misalnya, sebuah API untuk mengelola data pengguna mungkin memiliki beberapa endpoint seperti:
+*  GET/api/users : Mengmabil daftar semua pengguna.
+*  GET /api/users/{id}: Mengambil informasi pengguna dengan ID tertentu.
+*  POST /api/users: Menambahkan pengguna baru.
+*  PUT /api/users/{id}: Memperbarui informasi pengguna dengan ID tertentu.
+*  DELETE /api/users/{id}: Menghapus pengguna dengan ID tertentu.
+------------------------------------------------------------------------------
+
+
+
+
+
+C. Bagaimana API Endpoint Bekerja?
+1. Klien (client): Mengirimkan permintaan ke endpoint tertentu menggunakan metode HTTP yang sesuai.
+------------------------------------------------------------------------------
+2. Server: Menerima permintaan tersebut di endpoint yang dimaksud, memprosesnya, dan mengembalikan respons yang sesuai (misalnya, data dalam format JSON atau XML).
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
