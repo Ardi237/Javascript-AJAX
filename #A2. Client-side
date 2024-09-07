@@ -1,0 +1,107 @@
+A. Umum :
+1. Client-side dan server-side adalah dua konsep penting dalam pengembangan web yang merujuk pada tempat di mana pemrosesan dan eksekusi kode terjadi.
+---------------------------------------------------------------------------------------
+
+
+
+
+
+B. Client-side (Sisi klien) :
+1. Client-side mengacu pada segala sesuatu yang terjadi di perangkat pengguna, seperti browser web atau aplikasi lainnya. 
+---------------------------------------------------------------------------------------
+2. Pemrosesan client-side dilakukan langsung oleh komputer pengguna dan melibatkan elemen yang ditampilkan atau diubah di sisi pengguna tanpa memerlukan komunikasi langsung dengan server setelah halaman dimuat.
+---------------------------------------------------------------------------------------
+3. Contoh Teknologi Client-Side :
+*  HTML : Digunakan untuk menyusun struktur halaman web.
+*  CSS : Digunakan untuk menentukan tampilan dan gaya halaman web.
+*  JavaScript : Digunakan untuk interaktivitas dan manipulasi halaman web secara dinamis.
+*  Framework/Library Front-End: Seperti React, Angular, dan Vue.js, yang memperkaya pengalaman pengguna dengan fitur interaktif.
+---------------------------------------------------------------------------------------
+
+
+
+
+C. Kelebihan Client-Side :
+1. Responsif : Interaksi pengguna dapat terjadi tanpa menunggu respons dari server, sehingga meningkatkan kecepatan dan responsivitas aplikasi.
+---------------------------------------------------------------------------------------
+2. Beban server lebih rendah: Sebagian besar pemrosesan dilakukan di sisi klien, mengurangi beban pada server.
+---------------------------------------------------------------------------------------
+3. Pengalaman pengguna yang dinamis : Client-side scripting memungkinkan untuk membuat aplikasi yang interaktif dan kaya fitur, seperti drag-and-drop, animasi, dan pengisian formulir dinamis.
+---------------------------------------------------------------------------------------
+
+
+
+
+D. Kekurangan Client-Side:
+1. Keamanan : Kode client-side dapat diakses dan dimodifikasi oleh pengguna, sehingga kurang aman untuk data sensitif.
+---------------------------------------------------------------------------------------
+2. Ketergantungan pada perangkat pengguna : Jika perangkat pengguna tidak kuat, atau browser tidak mendukung fitur tertentu, pengalaman pengguna bisa terpengaruh.
+---------------------------------------------------------------------------------------
+3. Akses terbatas ke sumber daya server : Pemrosesan data besar atau kompleks biasanya lebih sulit dilakukan di client-side.
+---------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
