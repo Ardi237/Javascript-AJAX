@@ -1,0 +1,108 @@
+A. Umum :
+1. Server-side mengacu pada semua pemrosesan yang terjadi di server, yaitu komputer yang menyimpan situs web, aplikasi, atau data yang digunakan oleh klien. 
+------------------------------------------------------------------------------------
+2. Pemrosesan server-side biasanya melibatkan penerimaan permintaan dari klien, memproses data di server, dan kemudian mengirimkan hasilnya kembali ke klien.
+------------------------------------------------------------------------------------
+
+
+
+
+B. Contoh Teknologi Server-Side :
+1. Bahasa Pemrograman Server-Side: Seperti PHP, Node.js, Python, Ruby, Java, ASP.NET.
+------------------------------------------------------------------------------------
+2. Basis Data: Seperti MySQL, PostgreSQL, MongoDB, yang digunakan untuk menyimpan dan mengelola data di server.
+------------------------------------------------------------------------------------
+3. Framework Back-End: Seperti Express.js, Django, Laravel, Spring, yang membantu dalam pengembangan aplikasi server-side.
+------------------------------------------------------------------------------------
+
+
+
+C. Kelebihan Server-Side:
+1. Keamanan lebih baik: Data sensitif dapat diolah di server tanpa harus diungkapkan kepada klien.
+------------------------------------------------------------------------------------
+2. Pemrosesan data yang kompleks: Server-side cocok untuk memproses data yang besar atau memerlukan komputasi yang berat.
+------------------------------------------------------------------------------------
+3. Kontrol penuh atas konten yang dikirim ke klien: Server mengirimkan hasil yang telah diproses dan diformat dengan baik ke klien, menjaga integritas data.
+------------------------------------------------------------------------------------
+
+
+
+
+D. Kekurangan Server-Side :
+1. Latency (Keterlambatan): Karena semua pemrosesan harus melalui server, waktu respons bisa lebih lambat dibandingkan dengan client-side.
+------------------------------------------------------------------------------------
+2. Beban server lebih besar: Semua permintaan klien harus diproses di server, yang dapat meningkatkan beban kerja server, terutama pada aplikasi dengan banyak pengguna.
+------------------------------------------------------------------------------------
+3. Ketergantungan koneksi internet: Jika koneksi internet antara klien dan server terganggu, pengguna mungkin tidak dapat mengakses aplikasi atau situs.
+------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
