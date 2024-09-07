@@ -1,0 +1,150 @@
+A. Umum :
+1. JSON.parse() dan JSON.stringify() adalah dua metode penting dalam JavaScript yang digunakan untuk bekerja dengan data dalam format JSON (JavaScript Object Notation).
+-------------------------------------------------------------------------------
+
+
+
+
+B. JSON.parse() :
+1. Fungsi : Mengubah (parsing) string JSON menjadi objek JavaScript.
+-------------------------------------------------------------------------------
+2. Kegunaan : Metode ini digunakan ketika kita menerima data dalam format JSON, misalnya dari server melalui API, dan Anda ingin mengubah data tersebut menjadi objek JavaScript yang dapat Anda manipulasi dalam kode.
+-------------------------------------------------------------------------------
+3. Sintaks: JSON.parse(text)
+-------------------------------------------------------------------------------
+4. Parameter: (text) String JSON yang valid yang akan diubah menjadi objek JavaScript.
+-------------------------------------------------------------------------------
+5. Return Value: Objek JavaScript yang dihasilkan dari string JSON.
+-------------------------------------------------------------------------------
+6. Contoh Penggunaan :
+-------------------------------------------------------------------------------
+<----
+const jsonString = '{"name": "John", "age": 30, "isActive": true}';
+const obj = JSON.parse(jsonString);
+console.log(obj.name); // Output: John
+console.log(obj.age);  // Output: 30
+console.log(obj.isActive);  // Output: true
+---->
+//Penjelasan :
+7. Pada contoh di atas, jsonString adalah string JSON yang berisi informasi tentang seseorang. JSON.parse(jsonString) mengubah string tersebut menjadi objek JavaScript.
+-------------------------------------------------------------------------------
+8. Catatan Penting:
+*  Pastikan string JSON yang akan di-parse adalah valid, karena JSON.parse() akan menghasilkan kesalahan (error) jika string tidak sesuai dengan format JSON.
+-------------------------------------------------------------------------------
+9. Contoh string JSON yang valid:
+<----
+{"name":"John","age":30}
+Contoh string JSON yang tidak valid (tanpa tanda kutip ganda pada kunci):
+---->
+<----
+{name:"John",age:30}
+Ini akan menyebabkan error jika di-parse.
+---->
+-------------------------------------------------------------------------------
+
+
+
+
+
+C. JSON.stringify() :
+1. Fungsi: Mengubah (stringify) objek JavaScript menjadi string JSON.
+-------------------------------------------------------------------------------
+2. Kegunaan: Metode ini digunakan ketika kamu ingin mengirim data objek JavaScript ke server atau menyimpan data dalam format JSON, misalnya dalam penyimpanan lokal (localStorage).
+-------------------------------------------------------------------------------
+3. Sintaks: JSON.stringify(value[, replacer[, space]]).
+-------------------------------------------------------------------------------
+4. Parameter :
+*  value: Objek JavaScript yang akan diubah menjadi string JSON.
+*  replacer (opsional): Fungsi atau array yang dapat digunakan untuk menentukan bagaimana nilai atau properti tertentu disertakan dalam string JSON.
+*  space (opsional): Nilai yang digunakan untuk menentukan spasi atau indentasi dalam string JSON yang dihasilkan, untuk memudahkan pembacaan manusia.
+-------------------------------------------------------------------------------
+5. Return Value: String JSON yang merepresentasikan objek JavaScript.
+-------------------------------------------------------------------------------
+6. Contoh Penggunaan :
+<----
+const obj = { name: "John", age: 30, isActive: true };
+const jsonString = JSON.stringify(obj);
+console.log(jsonString); // Output: {"name":"John","age":30,"isActive":true}
+---->
+// Pada contoh di atas, obj adalah objek JavaScript, dan JSON.stringify(obj) mengubah objek tersebut menjadi string JSON.
+-------------------------------------------------------------------------------
+7. Penggunaan Parameter `space` :
+*  Anda bisa menggunakan parameter `space` untuk membuat output lebih mudah dibaca dengan menambahkan indentasi :
+<----
+const jsonString = JSON.stringify(obj, null, 2);
+console.log(jsonString);
+---->
+= output :
+{
+  "name": "John",
+  "age": 30,
+  "isActive": true
+}
+//Pada contoh ini, space diatur ke 2, yang berarti setiap level baru dalam JSON akan diindentasikan dengan dua spasi.
+-------------------------------------------------------------------------------
+8. Catatan Penting:
+*  JSON.stringify() tidak dapat mengonversi fungsi atau metode objek. Properti fungsi akan diabaikan dalam proses stringifying.
+*  Circular references (referensi yang mengarah kembali ke objek itu sendiri) juga akan menyebabkan error jika dicoba diubah menjadi string JSON.
+-------------------------------------------------------------------------------
+
+
+
+D. Perbedaan Utama
+1. JSON.parse() digunakan untuk mengubah string JSON menjadi objek JavaScript.
+-------------------------------------------------------------------------------
+2. JSON.stringify() digunakan untuk mengubah objek JavaScript menjadi string JSON.
+-------------------------------------------------------------------------------
+
+
+
+
+E. Contoh Gabungan
+1. Sebuah contoh yang menggabungkan kedua metode :
+<----
+// Objek JavaScript
+const user = {
+  name: "Alice",
+  age: 25,
+  skills: ["JavaScript", "React"]
+};
+
+// Ubah objek menjadi string JSON
+const jsonString = JSON.stringify(user);
+console.log(jsonString); // Output: {"name":"Alice","age":25,"skills":["JavaScript","React"]}
+
+// Ubah kembali string JSON menjadi objek JavaScript
+const parsedObj = JSON.parse(jsonString);
+console.log(parsedObj.name);  // Output: Alice
+console.log(parsedObj.skills);  // Output: ["JavaScript", "React"]
+---->
+//Penjelasan :
+1. Dalam contoh di atas, objek JavaScript diubah menjadi string JSON menggunakan JSON.stringify(), dan kemudian string JSON tersebut diubah kembali menjadi objek JavaScript menggunakan JSON.parse().
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
