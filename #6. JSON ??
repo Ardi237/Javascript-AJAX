@@ -1,0 +1,161 @@
+A. Umum : 
+1. JSON  (JavaScript Object Notation) : format yang digunakan untuk menyimpan dan mengirimkan data.
+----------------------------------------------------------------------
+2. JSON adalah bentuk teks yang dapat dibaca oleh manusia, yang digunakan terutama untuk mengirim data dalam aplikasi web antara server dan klien.
+----------------------------------------------------------------------
+3. JSON bersifat ringan, mudah dipahami, dan dapat digunakan dengan berbagai bahasa pemrograman, seperti JavaScript, Python, Java, dan lain-lain.
+----------------------------------------------------------------------
+
+
+
+
+
+B. Struktur JSON :
+1. Objek JSON: Data dalam JSON biasanya berbentuk objek yang terdiri dari pasangan kunci (key) dan nilai (value). 
+----------------------------------------------------------------------
+2. Objek JSON ditandai dengan kurung kurawal {}.
+----------------------------------------------------------------------
+3. Contoh :
+<----
+{
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+---->
+----------------------------------------------------------------------
+4. Array JSON: JSON juga mendukung array, yang merupakan kumpulan nilai yang terurut. Array JSON ditandai dengan kurung siku [].
+----------------------------------------------------------------------
+5. Contoh :
+<----
+{
+  "employees": [
+    { "name": "John", "age": 30 },
+    { "name": "Anna", "age": 25 },
+    { "name": "Peter", "age": 45 }
+  ]
+}
+---->
+----------------------------------------------------------------------
+
+
+
+
+C. Jenis nilai dalam JSON :
+1. Nilai dalam JSON bisa berupa :
+*  String (teks) : "Hello"
+*  Number (angka) : 25, 3.14
+*  Boolean (nilai benar/salah) : true, false
+*  Array (daftar) : [1, 2, 3]
+*  Object (objek) : {"key" : "value"}
+*  Null (nilai kosong) : null
+----------------------------------------------------------------------
+
+
+
+
+D. Mengapa JSON Populer?
+1. Kompabilitas: JSON dapat digunakan di hampir semua bahasa pemrograman.
+----------------------------------------------------------------------
+2. Ringan: Dibandingkan dengan XML, JSON lebih ringan dan lebih cepat dalam transmisi data.
+----------------------------------------------------------------------
+3. Sederhana: Struktur JSON yang mudah dibaca dan ditulis membuatnya ideal untuk pertukaran data.
+----------------------------------------------------------------------
+4. Dukungan Luas: Banyak API dan layanan web menggunakan JSON sebagai format data utama.
+----------------------------------------------------------------------
+
+
+
+
+E. Contoh Penggunaan JSON :
+1. Mengirim Data dari Server ke Browser: Ketika sebuah aplikasi web meminta data dari server, server dapat mengirimkan data dalam format JSON.
+1a. Contoh : 
+<----
+{
+  "status": "success",
+  "data": {
+    "user": "John Doe",
+    "age": 30
+  }
+}
+---->
+----------------------------------------------------------------------
+2. Menyimpan data pada aplikasi : JSON juga sering digunakan untuk menyimpan data lokal pada aplikasi (misalnya, dalam local storage). 
+----------------------------------------------------------------------
+3. Pertukaran Data pada API: API sering menggunakan JSON untuk mengirim dan menerima data antara klien dan server.
+----------------------------------------------------------------------
+
+
+
+
+F. Cara menggunakan JSON di JavaScript :
+1. Parse JSON: Mengubah string JSON menjadi objek JavaScript.
+<----
+const jsonString = '{"name": "John", "age": 30}';
+const obj = JSON.parse(jsonString);
+console.log(obj.name);  // Output: John
+---->
+----------------------------------------------------------------------
+2. Stringify JSON : Mengubah objek JavaScript menjadi string JSON :
+<----
+const obj = { name: "John", age: 30 };
+const jsonString = JSON.stringify(obj);
+console.log(jsonString);  // Output: {"name":"John","age":30}
+---->
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
