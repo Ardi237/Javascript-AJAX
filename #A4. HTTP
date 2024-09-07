@@ -1,0 +1,104 @@
+A. Umum : 
+1. HTTP (Hypertext transfer Protocol) : protokol komunikasi yang digunakan untuk mengirim data menerima informasi di web.
+-----------------------------------------------------------------------------
+2. HTTP memungkinkan pertukaran data antara klien (seperti browser web) dan server (tempat penyimpanan situs web) melalui jaringan, termasuk internet. 
+-----------------------------------------------------------------------------
+
+
+
+
+B. Cara kerja HTTP :
+1. HTTP beroperasi dalam model client-server. Ini berarti ada dua pihak utama :
+*  Client: Perangkat atau aplikasi yang mengirimkan permintaan (request) ke server. Contoh umum adalah browser web seperti Chrome, Firefox, atau Safari.
+-----------------------------------------------------------------------------
+*  Server: Perangkat atau aplikasi yang menerima permintaan dan memberikan respon (response) kepada client. Server ini menyimpan atau mengelola informasi yang diminta oleh client, seperti halaman web, gambar, atau data lainnya.
+-----------------------------------------------------------------------------
+
+
+
+
+
+C. Langkah Dasar dalam HTTP:
+1. Request: Ketika pengguna memasukkan URL di browser, browser mengirimkan HTTP request ke server untuk halaman atau file yang diinginkan.
+-----------------------------------------------------------------------------
+2. Response: Server merespons dengan mengirimkan kembali data yang diminta, seperti halaman 
+HTML, gambar, atau file lainnya. Data ini biasanya disertai dengan status code HTTP yang menunjukkan hasil dari permintaan tersebut, misalnya 200 (OK) untuk permintaan yang sukses, atau 404 (Not Found) jika halaman yang diminta tidak ditemukan.
+-----------------------------------------------------------------------------
+
+
+
+D. HTTP Request :
+1. HTTP request terdiri dari bebreapa elemen penting :
+*  Method: Ini adalah jenis permintaan yang dikirimkan client ke server. Beberapa metode HTTP yang umum digunakan:
+** GET: Digunakan untuk meminta data dari server (misalnya, halaman web).
+** POST: Digunakan untuk mengirim data ke server, biasanya dalam form (misalnya, pengiriman ** data login).
+** PUT: Mengupdate data di server.
+** DELETE: Menghapus data di server.
+*  URL: Alamat sumber daya yang diminta oleh client.
+*  Headers: Informasi tambahan yang disertakan dalam request (misalnya, jenis konten yang diharapkan atau informasi otentikasi).
+*  Body: Data yang dikirimkan dalam request, biasanya digunakan dalam metode POST atau PUT.
+-----------------------------------------------------------------------------
+
+
+
+
+
+E. HTTP Response :
+1. Response dari server juga terdiri dari beberapa elemen :
+*  Status Code: Kode tiga digit yang mengindikasikan hasil dari permintaan. Contoh :
+** 200 OK: Permintaan sukses dan data dikirimkan.
+** 404 Not Found: Halaman atau file yang diminta tidak ditemukan di server.
+** 500 Internal Server Error: Terjadi kesalahan di server.
+*  Headers: Informasi tambahan dalam response, seperti tipe konten yang dikirimkan atau durasi cache.
+*  Body: Data yang diminta, seperti halaman HTML, JSON, atau gambar.
+-----------------------------------------------------------------------------
+
+
+
+F. Versi HTTP
+1. HTTP/1.0: Versi awal HTTP yang hanya mendukung satu request-response per koneksi.
+-----------------------------------------------------------------------------
+2. HTTP/1.1: Versi ini memperkenalkan persistent connections, yang memungkinkan beberapa permintaan dan respons dikirimkan melalui satu koneksi TCP, meningkatkan efisiensi.
+-----------------------------------------------------------------------------
+3. HTTP/2: Versi ini meningkatkan performa dengan mendukung multiplexing, yang memungkinkan pengiriman beberapa request-response secara bersamaan melalui satu koneksi.
+-----------------------------------------------------------------------------
+4. HTTP/3: Versi terbaru yang menggantikan protokol TCP dengan QUIC, yang dirancang untuk mengurangi latensi dan meningkatkan kecepatan.
+-----------------------------------------------------------------------------
+
+
+
+
+G. Ciri-ciri HTTP :
+1. Stateless: HTTP tidak menyimpan informasi tentang status interaksi sebelumnya. Setiap permintaan adalah independen, dan server tidak memiliki "memori" dari permintaan sebelumnya. Untuk mengatasi ini, mekanisme seperti cookies digunakan.
+-----------------------------------------------------------------------------
+2. Text-based: HTTP request dan response adalah dalam format teks yang dapat dibaca manusia.
+-----------------------------------------------------------------------------
+
+
+
+
+H. Penggunaan HTTP :
+1. HTTP adalah tulang punggung dari web modern. 
+-----------------------------------------------------------------------------
+2. Setiap kali kamu mengakses halaman web, mengunduh file, atau menggunakan layanan online, HTTP kemungkinan besar adalah protokol yang digunakan untuk mengirimkan data antara browser dan server.
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
