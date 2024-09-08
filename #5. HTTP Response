@@ -1,0 +1,146 @@
+A. Umum :
+1. Kode respon HTTP : Kode status yang dikembalikan oleh server sebagai respons terhadap permintaan HTTP dari klien (browser atua aplikasi). 
+---------------------------------------------------------------------------
+2. Kode-kode ini memberi tahu klien tentang hasil permintaan yang diajukan dan apakah permintaan berhasil, gagal, atau memerlukan tindakna lebih lanjut. 
+---------------------------------------------------------------------------
+3. Kode respon HTTP biasanya terdiri dari tiga digit angak dan dibagi ke dalam lima kategori utama berdasarkan digit pertama.
+---------------------------------------------------------------------------
+
+
+
+
+
+B. 1xx : Informational (Informasi) :
+1. Kode dalam kategori ini menunjukkan bahwa permintaan telah diterima dan prosesnya masih berlangsung.
+---------------------------------------------------------------------------
+*  100 Continue : Server telah menerima bagian awal dari permintaan telah diterima dan prosesnya masih berlangsung.
+---------------------------------------------------------------------------
+*  101 Switching Protocols : Server setuju untuk mengubah protokol seusai dengan permintaan klien (misalnya, dari HTTP ke WebSocket).
+---------------------------------------------------------------------------
+*  102 Processing : Server sedang memproses permintaan, tetapi belum ada respons akhir.
+---------------------------------------------------------------------------
+
+
+
+
+
+C. 2xx : Success (Berhasil) :
+1. Kode dalam kategori ini menunjukkan bahwa permintaan telah berhasil diproses oleh server.
+---------------------------------------------------------------------------
+*  200 OK : Permintaan berhasil dan hasilnya dikembalikan kepada klien. Ini adalah kode yang paling umum digunakan.
+---------------------------------------------------------------------------
+*  201 Created : Permintaan berhasil dan menghasilkan pembuatan sumber data baru di server () misalnya, ketika klien membuat data baru di server).
+---------------------------------------------------------------------------
+*  202 Accepted : Permintaan telah diterima untuk di proses, tetapi pemprosesan belum selesai.
+---------------------------------------------------------------------------
+*  204 No Content : Permintaan berhasil, tetapi tidak ada kontent yang akan dikirim kembali (sering digunakan dalam operasi DELETE).
+---------------------------------------------------------------------------
+
+
+
+
+
+D. 3xx : Redirection (Pengalihan) : 
+1. Kode dalam kategori ini menunjukkan bahwa klien perlu melakukan tindakan lebih lanjut untuk menyelesaikan permintaan, seperti mengikuti pengalihan.
+---------------------------------------------------------------------------
+*  301 Moved Permanently : Sumber data yang diminta telah dipindahkan secara permanen ke URL yang baru. Klien seharusnya menggunakan URL baru untuk permintaan selanjutnya.
+---------------------------------------------------------------------------
+*  302 Found : Sumber daya sementara tersedia di lokasi yang berbeda. Pengalihan ini bersifat sementara.
+---------------------------------------------------------------------------
+*  304 Not Modified : Sumber daya tidak diubah sejak terakhir kali diakses. Server menginstruksikan klien untuk menggunakan salinan yang di-cache.
+---------------------------------------------------------------------------
+*  307 Temporary Redirect : Permintaan harus diulang dengan URL yang berbeda, tetapi menggunakan metode HTTP yang sama seperti permintaan awal.
+---------------------------------------------------------------------------
+
+
+
+
+
+E. 4xx CLient Error (Kesalahan dari klien) :
+1. Kode dalam kategori ini menunjukkan bahwa permintaan yang dikirim oleh klien salah atau tidak dapat diproses oleh server.
+---------------------------------------------------------------------------
+*  400 Bad Request: Server tidak dapat memahami permintaan karena sintaksis yang salah. Permintaan harus diperbaiki sebelum dicoba lagi.
+---------------------------------------------------------------------------
+*  401 Unauthorized: Klien harus diautentikasi sebelum permintaan dapat diproses. Biasanya muncul ketika klien belum masuk (login).
+---------------------------------------------------------------------------
+*  403 Forbidden: Server memahami permintaan, tetapi menolak untuk memprosesnya karena klien tidak memiliki izin yang diperlukan.
+---------------------------------------------------------------------------
+*  404 Not Found: Sumber daya yang diminta tidak ditemukan di server. Ini adalah salah satu kode kesalahan yang paling umum.
+---------------------------------------------------------------------------
+*  405 Method Not Allowed: Metode HTTP yang digunakan dalam permintaan tidak diizinkan untuk sumber daya tertentu.
+---------------------------------------------------------------------------
+*  429 Too Many Request : Klien telah mengirim teralu banyak permintaan dalam waktu yang singkat, dan harus menunggu sebelum mencoba lagi (biasanya terkait dengan pembatasan laju atau rate limiting).
+---------------------------------------------------------------------------
+
+
+
+
+
+F. 5xx : server Error (Kesalahan dari server) :
+1. Kode dalam kategori ini menunjukkan bahwa server mengalami kesalahan atua tidak dapat memenuhi permintaan : 
+---------------------------------------------------------------------------
+*  500 Internal Server Error : Server mengalami kesalahan umum yang mencegah pemrosesan permintaan. Ini adalah kode kesalahan yang sangat ummum jika terjadi masalah di server.
+---------------------------------------------------------------------------
+*  501 Not Implemented : Server tidak mendukung metode permintaan yang digunakan.
+---------------------------------------------------------------------------
+*  502 Bad gateaway : Server bertindak sebagai gateaway atau proxy dan menerima respons tidak valid dari server upstream (server lain yang diakses untuk menyelesaikan permintaan).
+---------------------------------------------------------------------------
+*  503 Service Unavailable : Server sedang tidka dapat menangani permintaan karena sedang pemeliharaan atau mengalami kelebihan beban. 
+---------------------------------------------------------------------------
+
+
+
+
+G. Kesimpulan : 
+1. Kode respon HTTP membantu dalam komunikasi antara klien dan server dengan memberikan informasi tentang hasil permintaan. 
+---------------------------------------------------------------------------
+2. Dengan memahami arti dari berbagai kode status ini, pengembang dapat menangani kesalahan dengan lebih baik, memberikan feedback yang tepat kepada pengguna, dan memastikan bahwa aplikasi web berfungsi dengan benar.
+--------------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
