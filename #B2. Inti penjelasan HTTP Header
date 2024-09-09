@@ -1,0 +1,141 @@
+A. Umum :
+1. HTTP headers dapat digunakan untuk mengontrol baik permintaan (request) yang dikirim ke server maupun respons (response) yang dikirim dari server ke klien.
+------------------------------------------------------------------
+
+
+
+B. Kontrol Terhadap Permintaan (Request Headers) :
+1. Request headers adalah bagian dari permintaan HTTP yang dikirim oleh klien (seperti browser atau aplikasi) ke server. 
+------------------------------------------------------------------
+2. Mereka mengandung informasi yang mengatur bagaimana permintaan harus diproses oleh server.
+------------------------------------------------------------------
+3. Contoh Penggunaan :
+*  Authorization : Untuk mengirimkan token authentikasi atau kredensial lainnya ke server.
+*  Accept : Untuk memberitahu server format data yang diinginkan dalam respons, seperti JSON atau XML.
+*  Content-Type: Jika klien mengirimkan data ke server (misalnya dalam permintaan POST), header ini menentukan format data tersebut (misalnya application/json untuk data JSON).
+*  User-Agent: Mengidentifikasi perangkat atau aplikasi yang mengirimkan permintaan, seperti versi browser.
+------------------------------------------------------------------
+
+
+
+
+
+C. Kontrol Terhadap Respons (Response Headers) :
+1. Response headers adalah bagian dari respons HTTP yang dikirim oleh server ke klien.
+------------------------------------------------------------------
+2. Mereka memberikan informasi tentang bagaimana klien harus menangani respons yang diterima.
+------------------------------------------------------------------
+3. Contoh penggunaan :
+*  Content-Type: Memberitahu klien tentang format data yang dikirim oleh server (misalnya, application/json untuk data JSON atau text/html untuk halaman HTML).
+------------------------------------------------------------------
+*  Cache-Control: Mengatur bagaimana klien harus melakukan caching terhadap respons tersebut (misalnya, apakah respons bisa disimpan di cache untuk diakses nanti).
+------------------------------------------------------------------
+*  Set-Cookie: Digunakan oleh server untuk mengirimkan cookie ke klien yang kemudian dapat disimpan oleh browser dan dikirim kembali dalam permintaan berikutnya.
+------------------------------------------------------------------
+
+
+
+
+D. Contoh Sederhana :
+1. Request Header : 
+<----
+GET /api/data HTTP/1.1
+Host: example.com
+Accept: application/json
+Authorization: Bearer your_token_here
+---->
+// Penjelasan
+*  Accept memberitahu server bahwa klien menginginkan data dalam format JSON.
+*  Authorization memberitahu server bahwa klien sudah terautentikasi dengan token yang diberikan.
+------------------------------------------------------------------
+2. Response Header :
+<----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Cache-Control: no-store
+---->
+// Penjelasan
+*  Content-Type memberitahu klien bahwa data yang dikirimkan adalah dalam format JSON.
+*  Cache-Control memberitahu klien untuk tidak menyimpan respons ini dalam cache.
+------------------------------------------------------------------
+
+
+
+
+E. Kesimpulan :
+1. HTTP headers berfungsi untuk mengontrol perilaku permintaan dan respons dalam komunikasi HTTP. 
+------------------------------------------------------------------
+2. Mereka menyediakan informasi tambahan yang memungkinkan klien dan server untuk memahami bagaimana mereka harus menangani data yang dikirim dan diterima.
+------------------------------------------------------------------
+3. Dengan menggunakan headers, kamu bisa mempengaruhi cara server memproses permintaan dan bagaimana klien harus menampilkan atau menyimpan respons.
+------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
