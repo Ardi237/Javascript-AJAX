@@ -1,0 +1,137 @@
+A. Umum : 
+1. fetch adalah fungsi bawaan JavaScript yang digunakan untuk melakukan permintaan HTTP (HTTP requests) ke server. 
+----------------------------------------------------------------------
+2. Fungsi ini menggantikan XMLHttpRequest dengan antarmuka yang lebih modern dan sederhana, serta berbasis promise, sehingga lebih mudah digunakan dalam penanganan operasi asinkron.
+----------------------------------------------------------------------
+
+
+
+
+
+B. Cara kerja `fetch` : 
+1. fetch mengambil URL sebagai argumen dan mengembalikan sebuah promise yang akan terpenuhi (resolved) saat respons dari server diterima, atau ditolak (rejected) jika terjadi kesalahan.
+----------------------------------------------------------------------
+2. Contoh :
+<----
+fetch('https://api.example.com/data')
+  .then(response => {
+    // Mengubah respons menjadi JSON
+    return response.json();
+  })
+  .then(data => {
+    // Mengolah data JSON yang diterima
+    console.log(data);
+  })
+  .catch(error => {
+    // Menangani kesalahan
+    console.error('Error:', error);
+  });
+---->
+// Penjelasan :
+1. fetch('URL') :
+*  Memulai permintaan HTTP GET ke URL yang diberikan. Secara default, fetch menggunakan metode GET, tetapi ini bisa diubah dengan menambahkan opsi.
+----------------------------------------------------------------------
+2. .then(response => response.json()):
+*  Ketika respons diterima, promise akan terpenuhi (resolved) dan callback dalam .then() pertama dipanggil. response.json() mengubah respons menjadi objek JSON yang dapat diolah lebih lanjut.
+----------------------------------------------------------------------
+3. .then(data => console.log(data)):
+*  Callback ini menerima data yang sudah diubah menjadi format JSON, dan di sini kita bisa memproses data tersebut, misalnya menampilkannya di konsol atau memperbarui UI.
+----------------------------------------------------------------------
+4. .catch(error => console.error('Error:', error)):
+*  Jika terjadi kesalahan selama permintaan atau respons (misalnya masalah jaringan), promise akan ditolak (rejected), dan kode di dalam .catch() akan dijalankan untuk menangani error tersebut.
+----------------------------------------------------------------------
+
+
+
+
+
+C. Mengirim permintaan POST dengan `fetch` : 
+1. Untuk melakukan permintaan POST atau metode HTTP lainnya (PUT, DELETE, dsb.), kamu bisa menambahkan objek opsi (options) ke dalam panggilan fetch.
+----------------------------------------------------------------------
+2. Contoh :
+<----
+fetch('https://api.example.com/data', {
+  method: 'POST', // Metode HTTP
+  headers: {
+    'Content-Type': 'application/json' // Header
+  },
+  body: JSON.stringify({
+    key1: 'value1',
+    key2: 'value2'
+  }) // Data yang dikirimkan
+})
+  .then(response => response.json())
+  .then(data => console.log('Success:', data))
+  .catch(error => console.error('Error:', error));
+---->
+// Penjelasan :
+*  method : `POST` : Menentukan metode HTTP yang digunakan untuk permintaan.
+*  headers : Menambahkan header tambahan, seperti Content-Type untuk menginformasikan tipe data yang dikirim.
+*  body : Berisi data yang dikirim ke server. Data ini harus berupa string, jadi biasanya menggunakan JSON.stringify() untuk mengubah objek JavaScript menjadi JSON.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+
+
+
+D. Keunggulan fetch :
+1. Berbasis Promise : Lebih mudah digunakan dengan `then` dan `catch`untuk penanganan respons dan error.
+----------------------------------------------------------------------
+2. Sederhana: Syntax yang lebih ringkas dan mudah dibaca dibandingkan dengan XMLHttpRequest.
+----------------------------------------------------------------------
+3. Fleksibel: Mendukung berbagai jenis metode HTTP, mengirim data dalam berbagai format, dan menangani berbagai jenis respons.
+----------------------------------------------------------------------
+
+
+
+
+E. Keterbatasan `fetch` :
+1. Tidak otomatis menangani error status HTTP : fetch hanya menolak promise jika terjadi masalah jaringan. 
+----------------------------------------------------------------------
+2. Jika respons HTTP memiliki status error seperti 404 atau 500, fetch tidak secara otomatis menganggapnya sebagai error. Kamu harus memeriksa status secara manual.
+----------------------------------------------------------------------
+3. Tidak Sepenuhnya Mendukung CORS di Beberapa Browser : fetch dapat memiliki keterbatasan dalam mendukung Cross-Origin Resource Sharing (CORS) di browser tertentu.
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
