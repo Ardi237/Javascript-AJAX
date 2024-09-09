@@ -1,0 +1,208 @@
+A. Umum :
+1. XMLHttpRequest (sering disingkat sebagai XHR) : 
+*  Objek di JavaScript yang memungkinkan kamu untuk membuat permintaan HTTP ke Server dan memproses responsnya tanpa harus memuat ulang halaman. 
+----------------------------------------------------------------------
+*  Ini adalah salah satu teknologi dasar di balik konsep AJAX (Asynchronous JavaScript and XML).
+----------------------------------------------------------------------
+
+
+
+
+B. Tahapan Request dengan XMLHttpRequest :
+1. Membuat Objek XMLHttpRequest : 
+*  Pertama, kamu perlu membuat instance dari objek XMLHttpRequest menggunakan konstruktor new XMLHttpRequest().
+<----
+let xhr = new XMLHttpRequest();
+---->
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+2. Menentukan Jenis Request dan URL : 
+*  Setelah membuat objek XHR, kamu harus menentukan jenis permintaan (GET, POST, dll.) dan URL tujuan dengan menggunakan metode open().
+<----
+xhr.open('GET', 'https://api.example.com/data', true);
+---->
+*  GET adalah jenis request yang digunakan.
+*  `https://api.example.com/data` adalah URL tujuan. 
+*  true menentukan apakah permintaan tersebut asynchronous (asinkron), yang berarti kode berikutnya akan dieksekusi tanpa menunggu respons selesai.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+3. Menentukan Headers (Opsional) :
+*  Jika kamu perlu mengirim header khusus, kamu bisa menambahkannya menggunakan metode setRequestHeader(). 
+*  Hal ini sering diperlukan untuk mengirim data dalam format tertentu seperti JSON atau menambahkan token autentikasi.
+<----
+xhr.setRequestHeader('Content-Type', 'application/json');
+---->
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+4. Mengatur Fungsi Callback :
+*  Kamu perlu mengatur fungsi yang akan dijalankan ketika status request berubah, dengan menggunakan properti onreadystatechange atau onload. 
+----------------------------------------------------------------------
+*  Fungsi ini akan dipanggil setiap kali status permintaan berubah (misalnya, dari belum terkirim menjadi terkirim, atau dari terkirim menjadi respons diterima).
+<----
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log(xhr.responseText); // Tampilkan respons jika sukses
+    }
+};
+---->
+// Penjelasan :
+*  readyState menunjukkan status permintaan. Nilai 4 berarti permintaan selesai dan respons sudah diterima.
+----------------------------------------------------------------------
+*  status menunjukkan status HTTP dari respons (misalnya 200 untuk sukses).
+----------------------------------------------------------------------
+*  responseText adalah respons yang diterima dalam bentuk teks.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+5. Mengirim permintaan : 
+*  Terakhir, gunakan metode send() untuk mengirim permintaan ke server. 
+----------------------------------------------------------------------
+*  Jika kamu menggunakan metode POST dan ingin mengirim data, kamu bisa menambahkan sebagai argumen dari send()
+<----
+xhr.send();
+---->
+*  Atau jika menggunakan POST dengan data :
+<----
+let data = JSON.stringify({ key: 'value' });
+xhr.send(data);
+---->
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+6. Menangani Respons (Opsional) : 
+*  Selain responseText, kamu juga bisa menangani respons dalam bentuk lain, seperti JSON (xhr.response jika tipe responnya diatur ke 'json') atau XML (xhr.responseXML).
+<----
+xhr.responseType = 'json';
+xhr.onload = function () {
+    if (xhr.status === 200) {
+        console.log(xhr.response); // Akan otomatis mengembalikan objek JSON
+    }
+};
+---->
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+
+
+
+
+C.  Contoh Lengkap :
+1. Contoh membuat request `GET` menggunakan XMLHttpRequest : 
+<----
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.example.com/data', true);
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) { // 4: request finished and response is ready
+        if (xhr.status === 200) { // 200: "OK"
+            console.log(xhr.responseText); // Tampilkan data dari server
+        } else {
+            console.error('Error: ' + xhr.status); // Tampilkan error jika ada
+        }
+    }
+};
+
+xhr.send();
+---->
+//  Penjelasan :
+*  open() menetapkan jenis request (GET) dan URL (https://api.example.com/data).
+*  onreadystatechange mengatur callback yang memeriksa apakah permintaan selesai dan sukses.
+*  send() mengirim permintaan ke server.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+
+
+D. Kesinpulan : 
+1. XMLHttpRequest memungkinkan kamu membuat permintaan HTTP ke server secara asinkron. 
+----------------------------------------------------------------------
+2. Dengan langkah-langkah seperti membuat objek, menetapkan jenis permintaan, mengatur callback, dan mengirim permintaan, kamu dapat berinteraksi dengan server untuk mengambil atau mengirim data tanpa perlu memuat ulang halaman.
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
