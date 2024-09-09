@@ -1,0 +1,85 @@
+A. Umum :
+1. Ketika kamu mendapatkan API dan ingin mengetesnya di Postman, dan kamu memasukkan key dan value seperti Accept sebagai key dan application/json sebagai value, itu berkaitan dengan penggunaan HTTP headers dalam permintaan (request) yang kamu kirimkan ke server.
+------------------------------------------------------------------------------
+
+
+
+
+B. HTTP Headers & API Requests :
+1. HTTP Headers : Seperti yang sudah dijelaskan sebelumnya, HTTP headers adalah bagian dari setiap permintaan atau tanggapan yang dikirim antara klien (seperti Postman) dan server. 
+*  Headers berisi informasi tambahan tentang permintaan atau tanggapan tersebut.
+------------------------------------------------------------------------------
+2. Key dan Value : Dalam konteks HTTP headers, key adalah nama header, dan value adalah nilai yang diberikan untuk header tersebut. Dalam contoh ini, Accept adalah key (nama header) dan application/json adalah value (nilai header).
+------------------------------------------------------------------------------
+
+
+
+
+C. Contoh `Accept` Header :
+1. Key (Accept) :  Header Accept digunakan oleh klien (Postman) untuk memberi tahu server jenis konten apa yang diharapkan dalam tanggapan. Dengan kata lain, klien memberi tahu server bahwa ia ingin menerima tanggapan dalam format tertentu.
+------------------------------------------------------------------------------
+2. Value (application/json) : Nilai application/json menunjukkan bahwa klien mengharapkan tanggapan dalam format JSON (JavaScript Object Notation). Jika server mendukung format JSON, ia akan merespons dengan data dalam format JSON.
+------------------------------------------------------------------------------
+
+
+
+
+D. Mengapa menggunakan headers ?
+1. Komunikasi yang Lebih Efisien : Headers seperti Accept membantu klien dan server berkomunikasi lebih efisien. 
+------------------------------------------------------------------------------
+2. Klien memberi tahu server preferensi kontennya, dan server merespons sesuai dengan preferensi tersebut.
+------------------------------------------------------------------------------
+3. Menentukan Format Data: Dalam API modern, seringkali ada berbagai format data yang tersedia, seperti JSON, XML, HTML, atau plaintext. 
+------------------------------------------------------------------------------
+4. Dengan menggunakan header Accept, kamu bisa menentukan format data yang kamu inginkan, dan server akan mengirimkan data dalam format tersebut.
+------------------------------------------------------------------------------
+5. Pengaturan Lainnya: Headers bisa digunakan untuk berbagai keperluan lain, seperti autentikasi, otorisasi, caching, pengiriman cookie, pengaturan bahasa, dan banyak lagi.
+------------------------------------------------------------------------------
+
+
+
+
+
+E. Contoh Penggunaan di Postman : 
+1. Menjalankan Request: Saat kamu menjalankan API request di Postman, kamu mungkin akan menambahkan beberapa headers untuk memastikan bahwa server mengerti permintaanmu dengan benar.
+*  Contoh :
+** Key : Accept.
+** Value : application/json.
+------------------------------------------------------------------------------
+*  Mengirim permintaan : Postman akan mengirimkan permintaan HTTP ke server API, termasuk header Accept: application/json di dalamnya. Ini memberi tahu server bahwa kamu ingin menerima data dalam format JSON.
+*  Menerima Tanggapan: Jika server mendukung JSON, maka ia akan mengirimkan data dalam format JSON sebagai tanggapan, dan kamu bisa melihat data ini dalam Postman.
+------------------------------------------------------------------------------
+
+
+
+
+F. Contoh nyata :
+1. Misalnya, kamu mengakses API cuaca, dan kamu ingin menerima informasi cuaca dalam format JSON. 
+------------------------------------------------------------------------------
+2. Kamu akan menggunakan Postman untuk mengirimkan permintaan GET ke endpoint API cuaca, dan kamu akan menambahkan header Accept: application/json. Server akan membaca header ini dan, jika memungkinkan, mengirimkan data cuaca dalam format JSON sebagai respons.
+------------------------------------------------------------------------------
+
+
+
+
+G. Kesimpulan:
+1. Memasukkan key Accept dan value application/json di Postman adalah cara untuk mengatur bagaimana server harus merespons permintaanmu, khususnya format data yang diinginkan dalam tanggapan. 
+------------------------------------------------------------------------------
+2. Ini memungkinkan komunikasi yang lebih efektif antara klien (Postman) dan server API.
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
