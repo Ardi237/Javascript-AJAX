@@ -1,0 +1,83 @@
+A. Umum :
+1. Base URL dan Query String adalah dua komponen penting dalam mengakses dan mengelola data melalui Web API. 
+-----------------------------------------------------------------------------
+
+
+
+
+B. Base URL :
+1. Base URL adalah bagian utama dari URL yang digunakan untuk mengakses suatu API atau endpoint tertentu.
+-----------------------------------------------------------------------------
+2. Ini adalah alamat dasar yang merujuk ke server tempat API di-host. 
+-----------------------------------------------------------------------------
+3. Base URL tidak berubah untuk setiap permintaan ke API yang sama, kecuali mungkin untuk bagian spesifik dari sumber daya yang ingin diakses.
+-----------------------------------------------------------------------------
+
+
+
+
+C. Contoh Base URL :
+1. Contoh : https://api.example.com/v1/
+*  https:// adalah protokol yang digunakan (biasanya HTTP atau HTTPS).
+*  api.example.com adalah domain server tempat API di-host.
+*  /v1/ adalah versi API yang sedang diakses.
+-----------------------------------------------------------------------------
+2. Penggunaan Base URL: Base URL ini digunakan sebagai titik awal untuk semua permintaan ke API. 
+-----------------------------------------------------------------------------
+3. Setiap endpoint yang spesifik hanya menambahkan path tambahan di akhir Base URL. Misalnya, jika kamu ingin mengakses daftar pengguna, URL lengkap mungkin menjadi:
+* https://api.example.com/v1/users
+-----------------------------------------------------------------------------
+
+
+
+
+D. Query String :
+1. Query String : Bagian dari URL yang digunakan untuk mengirim parameter atau informasi tambahan ke server dalam permintaan HTTP.
+-----------------------------------------------------------------------------
+2. Query String biasanya ditempatkan setelah tanda tanya (?) dalam URL dan terdiri dari pasangan kunci-nilai (key=value). 
+-----------------------------------------------------------------------------
+3. Beberapa parameter dapat digabungkan dengan menggunakan tanda ampersand (&).
+-----------------------------------------------------------------------------
+
+
+
+
+E. Contoh Query String :
+1. Contoh : https://api.example.com/v1/users?name=John&age=30
+*  name=John adalah parameter pertama dengan kunci name dan nilai John.
+*  age=30 adalah parameter kedua dengan kunci age dan nilai 30.
+-----------------------------------------------------------------------------
+2. Penggunaan Query String : Query String digunakan untuk mengirim parameter tambahan ke API yang dapat mengubah cara data diambil atau diproses oleh server. 
+-----------------------------------------------------------------------------
+3. Misalnya, kamu mungkin ingin memfilter, mengurutkan, atau membatasi jumlah hasil yang dikembalikan oleh API.
+-----------------------------------------------------------------------------
+
+
+
+
+F. Contoh Penggunaan Query String dalam API:
+*  Filter : Mengambil data pengguna yang bernama "John" : 
+<---- https://api.example.com/v1/users?name=John ---->
+-----------------------------------------------------------------------------
+*  Pagination : Mengambil halaman kedua dengan 10 hasil per halaman:
+<---- https://api.example.com/v1/users?page=2&limit=10 ---->
+-----------------------------------------------------------------------------
+* Sorting: Mengambil data pengguna dan mengurutkan berdasarkan umur secara menaik :
+<---- https://api.example.com/v1/users?sort=age&order=asc ---->
+-----------------------------------------------------------------------------
+
+
+
+G. Kesimpulan:
+1. Base URL adalah bagian utama dari URL yang mengarahkan ke lokasi server tempat API di-host dan biasanya tetap konsisten di setiap permintaan API yang sama.
+-----------------------------------------------------------------------------
+2. Query String adalah cara untuk mengirim parameter tambahan dalam URL untuk mengontrol atau memodifikasi respons yang dikirimkan oleh server.
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
