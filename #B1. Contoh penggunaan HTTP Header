@@ -1,0 +1,149 @@
+A. Umum :
+1. Contoh penggunaan HTTP headers dalam permintaan (request) menggunakan Postman untuk berinteraksi dengan sebuah API. 
+-----------------------------------------------------------------------------
+
+
+
+
+B. Contoh Kasus :
+1. Kamu ingin mengirimkan permintaan GET ke sebuah API yang menyediakan data cuaca. Kamu ingin menerima data dalam format JSON dan mengirimkan kunci API (API key) sebagai bentuk autentikasi.
+-----------------------------------------------------------------------------
+2. Langkah-langkah di Postman : 
+*  Pilih Method : Di Postman, pilih metode HTTP GET (karena kamu ingin mendapatkan data). 
+-----------------------------------------------------------------------------
+*  Masukan URL API : Misalnya, kamu menggunakan API Cuaca dengan endpoint : 
+                     ** https://api.weather.com/v3/weather/forecast . 
+-----------------------------------------------------------------------------
+*  Klik tab Headers di Postman, lalu tambahkan key dan value sebagai berikut : 
+** Header 1 : 
+   ** Key : Accept
+   ** Value : application/json
+      ** Penjelasan : Ini memberitahu server bahwa kamu ingin menerima respons dalam format           JSON.
+** Header 2 :
+   ** Key : Authorization 
+   ** Value : Bearer YOUR_API_KEY
+      ** Penjelasan : Ini adalah header untuk autentikasi. Gantilah YOUR_API_KEY dengan               kunci API yang sebenarnya. Bearer digunakan untuk tipe autentikasi berbasis token.
+-----------------------------------------------------------------------------
+*  Kirim Permintaan : Setelah kamu mengatur URL dan header, klik tombol Send untuk mengirimkan permintaan.
+-----------------------------------------------------------------------------
+*  Lihat Respons : 
+   ** Server akan membaca header Accept : application/json dan jika mendukung, akan mengirimkan data cuaca dalam format JSON. Kamu dapat melihat respons di tab Body di Postman.
+-----------------------------------------------------------------------------
+*  Ilustrasi dalam Postman : 
+Key            value
+Accept         application/json
+Authorization  Bearer YOUR_API_KEY
+-----------------------------------------------------------------------------
+
+
+
+
+C. Contoh Header dalam kode JavaScript
+1. Jika kamu ingin membuat permintaan yang sama menggunakan JavaScript (misalnya dengan fetch), maka kode akan terlihat seperti ini:
+<----
+fetch('https://api.weather.com/v3/weather/forecast', {
+  method: 'GET',
+  headers: {
+    'Accept': 'application/json',
+    'Authorization': 'Bearer YOUR_API_KEY'
+  }
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+---->
+-----------------------------------------------------------------------------
+//Penjelasan Header yang Sering Digunakan :
+1. Accept: Menentukan format data yang diinginkan dari server, seperti application/json, text/html, dll.
+-----------------------------------------------------------------------------
+2. Content-Type: Menentukan format data yang kamu kirim ke server, seperti application/json jika kamu mengirimkan data JSON.
+-----------------------------------------------------------------------------
+3. Authorization: Digunakan untuk autentikasi, misalnya Bearer <token> untuk autentikasi berbasis token atau Basic <base64encoded> untuk autentikasi dasar.
+-----------------------------------------------------------------------------
+4. User-Agent: Mengidentifikasi klien yang mengirimkan permintaan, seperti browser atau aplikasi.
+-----------------------------------------------------------------------------
+5. Cache-Control: Mengatur bagaimana caching dilakukan untuk permintaan ini.
+-----------------------------------------------------------------------------
+
+
+
+
+D. Kesimpulan :
+1. HTTP headers digunakan untuk memberikan informasi tambahan dalam permintaan HTTP, yang membantu server memahami bagaimana menangani permintaan tersebut. 
+-----------------------------------------------------------------------------
+2. Di Postman, kamu bisa menambahkan headers seperti Accept dan Authorization untuk menentukan format data dan autentikasi saat berinteraksi dengan sebuah API.
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
