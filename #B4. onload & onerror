@@ -1,0 +1,110 @@
+A. Umum :
+1. Dalam penggunaan XMLHttpRequest, dua event penting yang sering digunakan adalah onload dan onerror. 
+--------------------------------------------------------------------------------
+2. Keduanya digunakan untuk menangani situasi yang terjadi setelah permintaan HTTP dikirim ke server dan respons diterima.
+--------------------------------------------------------------------------------
+
+
+
+
+B. `onload` : 
+1. Event `onload` dipicu ketika permintaan HTTP telah selesai dengan sukses. Artinya, server merespons dengan status yang menunjukkan bahwa permintaan telah diproses dengan benar (biasanya status HTTP 200).
+--------------------------------------------------------------------------------
+2. Dalam callback onload, kamu dapat mengakses respons dari server dan menanganinya sesuai kebutuhan, seperti menampilkan data, mengupdate UI, atau mengolah data.
+--------------------------------------------------------------------------------
+3. Contoh Penggunaan : 
+<----
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.example.com/data', true);
+
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        // Respons sukses, tampilkan hasil
+        console.log('Data received:', xhr.responseText);
+    } else {
+        // Handle status code yang berbeda dari 200
+        console.error('Request failed. Status:', xhr.status);
+    }
+};
+
+xhr.send();
+---->
+// Penjelasan:
+*  xhr.onload adalah event handler yang akan dipanggil ketika permintaan selesai dan server merespons.
+--------------------------------------------------------------------------------
+*  Di dalam onload, kamu bisa memeriksa xhr.status untuk memastikan apakah respons dari server menunjukkan keberhasilan (200 OK). Jika status adalah 200, kamu dapat mengambil dan menggunakan data dari xhr.responseText.
+--------------------------------------------------------------------------------
+
+
+
+
+C. onerror :
+1. Event onerror dipicu ketika ada kesalahan selama pengiriman permintaan HTTP, seperti jaringan yang gagal, server yang tidak merespons, atau terjadi kesalahan lainnya yang menyebabkan permintaan tidak dapat diselesaikan.
+--------------------------------------------------------------------------------
+2. Dalam callback onerror, kamu bisa menangani kesalahan tersebut, seperti menampilkan pesan error kepada pengguna atau mencoba mengirim ulang permintaan.
+--------------------------------------------------------------------------------
+3. Contoh Penggunaan :
+<----
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.example.com/data', true);
+
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        // Respons sukses, tampilkan hasil
+        console.log('Data received:', xhr.responseText);
+    } else {
+        console.error('Request failed. Status:', xhr.status);
+    }
+};
+
+xhr.onerror = function() {
+    // Tangani error jaringan
+    console.error('Network error occurred.');
+};
+
+xhr.send();
+---->
+// Penjelasan :
+1. xhr.onerror adalah event handler yang akan dipanggil jika terjadi kesalahan selama pengiriman atau penerimaan permintaan.
+--------------------------------------------------------------------------------
+2. Event ini berguna untuk menangani situasi di mana permintaan tidak pernah mencapai server atau server tidak merespons, sehingga kamu bisa mengambil tindakan yang sesuai, seperti memberi tahu pengguna atau mencatat kesalahan untuk debugging.
+--------------------------------------------------------------------------------
+
+
+
+
+
+D. Kesimpulan:
+1. onload: Digunakan untuk menangani respons sukses dari server. Di sini, kamu bisa memeriksa status respons dan mengakses data dari server.
+--------------------------------------------------------------------------------
+2. onerror: Digunakan untuk menangani kesalahan yang terjadi selama pengiriman atau penerimaan permintaan, terutama masalah jaringan atau kesalahan lain yang mencegah permintaan mencapai server.
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
